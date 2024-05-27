@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { ArrowLeftCircle } from "lucide-react";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ContactSvg } from "./svgs";
+import { ContactSvg } from "../../components/svgs";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
