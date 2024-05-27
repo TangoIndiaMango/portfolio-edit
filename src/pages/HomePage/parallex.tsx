@@ -48,7 +48,7 @@ const Parallex = () => {
         className="w-full flex flex-col items-center space-y-3 p-3 md:px-10"
       >
         <motion.h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-8 text-center bg-[#0c0c1d]/80 p-5 pb-0">
-          Software Developer
+          Software Engineer
         </motion.h1>
 
         <motion.div className="flex items-center justify-center w-full md:w-[70%] sm:px-10 p-5 bg-[#0c0c1d]/85 pb-2">

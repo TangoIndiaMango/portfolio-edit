@@ -13,7 +13,7 @@ const links = [
     name: "About",
     link: "#about"
   },
-  
+
   {
     name: "Projects",
     link: "#projects"
@@ -25,7 +25,7 @@ const links = [
   {
     name: "Blog",
     link: "https://blog-app-utw6.vercel.app/"
-  },
+  }
 ];
 
 const navbarLinks = [
@@ -34,10 +34,15 @@ const navbarLinks = [
     name: "Story",
     link: "/story"
   }
-]
+];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const handleMobileClick = () => {
+
+    setOpen(!open);
+  };
 
   const topVaiants = {
     closed: {
@@ -177,10 +182,14 @@ const Navbar = () => {
           >
             {navbarLinks.map((link) => (
               <motion.div variants={listItemVariants} key={link.name}>
-                <Link to={link.link} className="">
+                <a
+                  href={link.link}
+                  className=""
+                  onClick={handleMobileClick}
+                >
                   <span className="font-semibold p-1">{link.name}</span>
-                </Link>
-              </motion.div> 
+                </a>
+              </motion.div>
             ))}
           </motion.div>
         )}

@@ -1,12 +1,40 @@
 import { motion, useInView } from "framer-motion";
 import { ArrowLeftCircle } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ContactSvg } from "./svgs";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const ref: any = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
+  const formref: any = useRef();
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSumbit = async (e: any) => {
+    e.preventDefault();
+    setError(false);
+    setSuccess(false);
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        formref.current,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setSuccess(true);
+          console.log(result.text);
+          formref.current.reset();
+        },
+        (error) => {
+          setError(true);
+          console.log(error.text);
+        }
+      );
+  };
 
   const variants = {
     initial: {
@@ -66,6 +94,8 @@ const Contact = () => {
             </motion.div>
             <div className="w-full h-full flex items-center justify-center">
               <motion.form
+                ref={formref}
+                onSubmit={handleSumbit}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 4, duration: 1 }}
@@ -74,14 +104,14 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Name"
-                  name="name"
+                  name="from_name"
                   required
                   className="p-4 bg-transparent text-white border border-1 rounded-lg"
                 />
                 <input
                   type="email"
                   placeholder="Email"
-                  name="email"
+                  name="user_email"
                   required
                   className="p-4 bg-transparent text-white border border-1 rounded-lg"
                 />
@@ -95,6 +125,18 @@ const Contact = () => {
                 <button className="p-4 text-white rounded bg-slate-900 hover:bg-[#f1f1f9]/50 hover:text-black">
                   Send
                 </button>
+
+                {success && (
+                  <p className="text-sm text-green-500 italic">
+                    Your message has been sent successfully
+                  </p>
+                )}
+
+                {error && (
+                  <p className="text-sm text-red-500 italic">
+                    An error occcured, see my contact above leave me a message.
+                  </p>
+                )}
               </motion.form>
             </div>
           </div>

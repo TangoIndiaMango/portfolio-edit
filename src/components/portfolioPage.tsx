@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const items = [
   {
     id: 1,
-    color: "from-red-300 to-blue-300",
-    // color: "from-[#2d2b6b] to-[#3e3b92]",
+    // color: "from-red-300 to-blue-300",
+    color: "from-[#2d2b6b] to-[#3e3b92]",
     title: "Journey Of MotherHood",
     desc: "This a fullstack application built with React and Django to epower it's users to upload related information regarding their ongoing lifecycle as a mother, providing a means for spreading knowledge among diverse set of peole who might not be able to have access to that",
     img: "https://res.cloudinary.com/aliyu-timi/image/upload/v1715362391/Screenshot_2024-05-10_181753_q6plun.png",
@@ -14,8 +14,8 @@ const items = [
   },
   {
     id: 2,
-    color: "from-blue-300 to-violet-300",
-    // color: "from-[#3e3b92] to-[#625fa7]",
+    // color: "from-blue-300 to-violet-300",
+    color: "from-[#3e3b92] to-[#625fa7]",
 
     title: "Next.js Blog",
     desc: "This Blog app is a dynamic web application designed to streamline the process of creating, listing, and viewing blog posts. With tag-based navigation, users can easily explore trending, latest, and top-rated blogs. Built using Next.js.",
@@ -24,8 +24,8 @@ const items = [
   },
   {
     id: 3,
-    color: "from-violet-300 to-purple-300",
-    // color: "from-[#625fa7] to-[#8684bb]",
+    // color: "from-violet-300 to-purple-300",
+    color: "from-[#625fa7] to-[#8684bb]",
 
     title: "Product Selling Store",
     desc: "Allowing digital sellers to showcase their products and connect with potential clients, the platform offers a seamless experience for displaying icons, themes, and more. Using Next.js, and also integrated with Payload CMS for streamlined content management and secure authorization",
@@ -34,8 +34,8 @@ const items = [
   },
   {
     id: 4,
-    color: "from-purple-300 to-red-300",
-    // color: "from-[#8684bb] to-[#a9a8d0]",
+    // color: "from-purple-300 to-red-300",
+    color: "from-[#8684bb] to-[#a9a8d0]",
     title: "Inventory App",
     desc: "Built with Django and ReactJS.",
     img: "https://res.cloudinary.com/aliyu-timi/image/upload/v1715364381/Screenshot_2024-05-10_190559_vaxxjl.png",
@@ -56,7 +56,7 @@ const PortfolioPage = () => {
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
-            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-[#1d1c44] to-red-300" />
+            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-[#1d1c44] to-[#2d2b6b]" />
             {items.map((item) => (
               <div
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
