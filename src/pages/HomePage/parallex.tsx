@@ -29,6 +29,7 @@ const Parallex = () => {
   return (
     <div
       ref={ref}
+      id="home"
       className="bg-gradient-to-r h-full text-white from-[#111132] to-[#0c0c1d] w-full relative flex items-center justify-center overflow-hidden mt-24"
     >
       {images.map((image: any, index: number) => (

@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Notebook } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NavLink from "./NavLink";
 
 const links = [
   {
     name: "Home",
-    link: "/"
+    link: "#home"
   },
   {
     name: "About",
@@ -38,10 +38,11 @@ const navbarLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const handleMobileClick = () => {
-
+  const handleMobileClick = (link: any) => {
     setOpen(!open);
+    navigate(link.link);
   };
 
   const topVaiants = {
@@ -182,13 +183,7 @@ const Navbar = () => {
           >
             {navbarLinks.map((link) => (
               <motion.div variants={listItemVariants} key={link.name}>
-                <a
-                  href={link.link}
-                  className=""
-                  onClick={handleMobileClick}
-                >
-                  <span className="font-semibold p-1">{link.name}</span>
-                </a>
+                <NavLink link={link} onClick={() => handleMobileClick(link.link)} />
               </motion.div>
             ))}
           </motion.div>
