@@ -33,6 +33,14 @@ const navbarLinks = [
   {
     name: "Story",
     link: "/story"
+  },
+  {
+    name: "Github",
+    link: "https://github.com/TangoIndiaMango"
+  },
+  {
+    name: 'Linkeden',
+    link: 'https://www.linkedin.com/in/timilehin-aliyu/'
   }
 ];
 
