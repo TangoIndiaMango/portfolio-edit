@@ -40,6 +40,15 @@ const items = [
     desc: "Built with Django and ReactJS.",
     img: "https://res.cloudinary.com/aliyu-timi/image/upload/v1715364381/Screenshot_2024-05-10_190559_vaxxjl.png",
     link: "https://lama.dev"
+  },
+  {
+    id: 5,
+    // color: "from-purple-300 to-red-300",
+    color: "from-[#a9a8d0] to-[#8684bb]",
+    title: "Map Coordinates",
+    desc: "This a Map coordinate selector built with AngularJs that can provide you the active location you are, allow you to select multiple cordinates, search for up to four cordinates and calculate the area of these coordinates",
+    img: "https://res.cloudinary.com/aliyu-timi/image/upload/v1721118810/Screenshot_2024-07-16_211052_adaliz.png",
+    link: "https://map-coords.netlify.app/"
   }
 ];
 
