@@ -80,7 +80,7 @@ const Parallex = () => {
             View my Work
           </motion.a>
           <motion.a
-            href="https://docs.google.com/document/d/1Ks_j5DqVYdTe-VK-1dMuMNPYzdPA8i8rtSIs4Lk06wA/edit?usp=sharing"
+            href="https://docs.google.com/document/d/18g1a0N-q9bC4xMY2G9k4Hx9Gv3dWyzl2FJtcfKEv-2U/edit?usp=sharing"
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
